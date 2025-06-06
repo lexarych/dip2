@@ -1,0 +1,28 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+
+
+.hero {
+    color: white;
+}
+
+.hero-body {
+    color: white;
+}
+
+.section {
+    padding: 3rem 1.5rem;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}

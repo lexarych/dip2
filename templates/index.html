@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero is-medium is-primary is-bold">
+    <div class="hero-body" style="background-image: url('{{ url_for('static', filename='fabric.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                Ласкаво просимо до нашого текстильного магазину!
+            </h1>
+            <h2 class="subtitle">
+                Ми пропонуємо широкий асортимент високоякісних тканин для всіх ваших потреб.
+            </h2>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title">Про нас</h2>
+        <p>Наш магазин займається продажем текстильних виробів вже понад 20 років. Ми пропонуємо тільки найкращі матеріали для наших клієнтів.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title">Рекомендовані товари</h2>
+        <div class="columns is-multiline">
+            {% for product in products %}
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">{{ product[1] }}</p>
+                            <p>{{ product[2] }}</p>
+                            <p class="subtitle">Ціна: ${{ product[3] }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title">Відгуки клієнтів</h2>
+        <div class="content">
+            <p>"Це найкращий текстильний магазин, який я коли-небудь відвідував!" - Іван Петрович</p>
+            <p>"Якість тканин просто чудова, рекомендую всім!" - Олена Іванівна</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

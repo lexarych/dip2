@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="title">Зв'яжіться з нами</h1>
+        <form method="POST">
+            <div class="field">
+                <label class="label" for="name">Ім'я</label>
+                <div class="control">
+                    <input class="input" type="text" id="name" name="name" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="email">Електронна пошта</label>
+                <div class="control">
+                    <input class="input" type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="message">Повідомлення</label>
+                <div class="control">
+                    <textarea class="textarea" id="message" name="message" required></textarea>
+                </div>
+            </div>
+            <div class="control">
+                <button class="button is-primary" type="submit">Відправити</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
